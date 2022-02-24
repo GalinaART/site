@@ -1,0 +1,158 @@
+.ref {
+  position: relative;
+}
+
+.ref:visited {
+    color: SlateBlue;
+}
+
+.ref:hover {
+    color: #ffffff;
+
+    transition-duration: 500ms;
+}
+
+.ref:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+
+    width: 0%;
+    background-color: white;
+
+    transition-duration: 500ms;
+}
+
+.ref:hover:after {
+    width: 100%;
+
+    transition-duration: 500ms;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  position: relative;
+  background: white;
+  width: 100%;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-item {float: left;}
+.right-item {float: right;}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "mulish-black", sans-serif;
+  font-weight: bold;
+  color: black;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: #D3D3D3;}
+@media (max-width: 830px) {
+.menu-main {
+  padding-top: 90px;
+  text-align: center;
+}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.menu-main li {
+  float: none;
+  display: inline-block;
+}
+.menu-main a {
+  line-height: normal;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+}
+@media (max-width: 630px) {
+.menu-main li {display: block;}
+}
+h1, h2, h3, p {
+font-family: "mulish-black";
+text-align: center;
+}
+h1 {
+font-size: 50px;
+}
+p{
+font-size: 25px;
+width: 60%;
+text-align: justify;
+margin: 0 auto;
+line-height: 33px;
+}
+a {
+font-family: "mulish-black"; 
+}
+footer{
+margin: 0 auto;
+}
+.page{
+margin-bottom: 20px;
+}
+select {
+line-height: normal;
+  padding: 20px 15px;
+  font-size: 32px;
+  font-family: "mulish-black";
+}
+option{
+font-size: 22px;
+font-family: "mulish-black";  
+}
+.foot{
+text-align: center;
+font-size: 18px;
+margin: 0 auto;
+}
+table {
+width: 70%;
+margin: 0 auto;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+border-collapse: separate;
+border-spacing: 5px;
+background: #ECE9E0;
+color: #656665;
+border: 16px solid #ECE9E0;
+border-radius: 20px;
+}
+th {
+font-size: 18px;
+padding: 10px;
+}
+td {
+background: #F5D7BF;
+padding: 10px;
+}
+a {
+  text-decoration: none;
+}
+/*.xxx {
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  color: black;
+}
+.back {
+  background-color: #CEFFD6;
+}*/
