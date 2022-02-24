@@ -1,0 +1,55 @@
+img{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+.main{
+    border: 2px solid black;
+    box-shadow: 10px 5px 5px black;
+    font-family: 'Roboto Slab', serif;
+    background-color: antiquewhite;
+    padding-bottom: 10px;
+    padding: 0% 5% 10px;
+    animation-name: color-animation;
+    animation-duration: 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+body{
+    background-image: url(1636535551.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4% 27% 2%;
+    font-size: 1.23vw;
+}
+*{
+    box-sizing: border-box;
+}
+.text{
+    position: relative;
+    opacity: 0;
+}
+@keyframes slidein {
+    from{
+        opacity: 0;
+        left: 30px;
+    }
+    80%{opacity: 0.3;
+        left: 6px;
+        
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes color-animation{
+    from{
+        background-color:antiquewhite;
+    }
+    to{
+        background-color: random;
+    }
+}
