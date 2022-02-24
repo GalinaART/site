@@ -1,0 +1,422 @@
+body {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 1.5vw;
+    line-height: 3vw;
+
+    padding-top: 8%;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    background-image: url("../img/memorial0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+		filter: blur(10px);
+}
+
+
+
+.page > div{
+    overflow: hidden;
+  
+    padding: 3%;
+      
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 8px 8px 20px 0px #222222, inset 0 0 60px -30px black;
+    
+    /*
+     Надо будет поменять анимацию на градиент
+     и сделать для каждого блока рандомную точку начала
+    */
+    animation-name: switch_bgs;
+    animation-duration: 40s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+.header__text {
+    margin-bottom: 2%;
+
+    font-size: 5vw;
+    font-weight: 600;
+    line-height: 5vw;
+
+    text-align: center;
+    text-shadow: 10px 10px 200px black; 
+}
+
+
+
+.current_img {
+    border: 5px solid #D3D3D3;
+    border-radius: 5px;
+}
+
+.hidden_img {
+    display: none;
+}
+
+.imageMouseLeave {
+    width: 97%;
+    
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+
+    transition-duration: 100ms;
+}
+
+.imageMouseEnter {
+    width: 100%;
+    
+    margin-left: 0;
+    margin-right: 0;
+
+    transition-duration: 400ms;
+    transition-timing-function: linear;
+}
+
+
+
+.main_info__row__column {
+  margin-bottom: 2%;
+}
+
+.main_info__row__column:last-child {
+  margin-bottom: 0;
+}
+
+.main_info__row__column > p{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.head_item {
+    width: 33%;
+
+    font-size: 1.7vw;
+    font-weight: 500;
+
+    text-align: left;
+}
+
+.info_item {
+    width: 66%;
+
+    text-align: justify;
+}
+
+.main_info__our_networks__info {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ref_wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.ref_wrapper_last a {
+    margin-bottom: 0;
+}
+
+.ref {
+    display: inline-block;
+
+    position: relative;
+
+    margin-bottom: 1.5%;
+
+    color: DarkCyan;
+}
+
+.ref:visited {
+    color: SlateBlue;
+}
+
+.ref:hover {
+    color: Khaki;
+
+    transition-duration: 500ms;
+}
+
+.ref:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 0%;
+    height: 1px;
+    background-color: black;
+
+    transition-duration: 500ms;
+}
+
+.ref:hover:after {
+    width: 100%;
+
+    transition-duration: 500ms;
+}
+
+.ref__img {
+    padding-right: 2%;
+}
+
+.ref * {
+    vertical-align: middle;
+}
+
+
+.other_info__text {
+    text-align: center;
+}
+
+
+
+/*hard place*/
+.front_view__image {
+    position: relative;
+}
+
+.front_view__image__image_control {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.front_view__image__image_control * {
+    position: absolute;
+}
+
+.arrow {
+    width: 4.5%;
+    height: 10%;
+
+    top: 45%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow:hover, .arrow:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.left_arrow {
+    left: 4%;
+}
+
+.right_arrow {
+    right: 4%;
+}
+
+.arrow_part {
+    width: 30%;
+    height: 50.5%;
+
+    left: 35%;
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bottom_arrow_part {
+    top: 50%;
+}
+
+.left_arrow__bottom_part, .right_arrow__top_part {
+    transform: skewX(40deg);
+}
+
+.left_arrow__top_part, .right_arrow__bottom_part {
+    transform: skewX(-40deg);
+}
+
+
+.image_control__position {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    bottom: -3.5%;
+    
+    
+    
+}
+
+.image_control__circle {
+    position: static !important;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    
+    margin: 0 5%;
+}
+
+.empty_circle {
+    background-color: none;
+    
+    transition-duration: 500ms;
+}
+
+.filled_circle {
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    transition-duration: 500ms;
+
+    box-shadow: inset 0 0 1px black;
+}
+
+
+
+
+
+/*Можно заимпрувить (укоротить это), но мне лень*/
+@keyframes switch_bgs__01 {
+    from {
+        background-color: #AA9999;
+    }
+    50% {
+        background-color: #99AA99;
+    }
+    to {
+        background-color: #9999AA;
+    }
+}
+
+@keyframes switch_bgs__02 {
+    from {
+        background-color: #AA9999;
+    }
+    50% {
+        background-color: #9999AA;
+    }
+    to {
+        background-color: #99AA99;
+    }
+}
+
+@keyframes switch_bgs__03 {
+    from {
+        background-color: #99AA99;
+    }
+    50% {
+        background-color: #AA9999;
+    }
+    to {
+        background-color: #9999AA;
+    }
+}
+
+@keyframes switch_bgs__04 {
+    from {
+        background-color: #99AA99;
+    }
+    50% {
+        background-color: #9999AA;
+    }
+    to {
+        background-color: #AA9999;
+    }
+}
+
+@keyframes switch_bgs__05 {
+    from {
+        background-color: #9999AA;
+    }
+    50% {
+        background-color: #AA9999;
+    }
+    to {
+        background-color: #99AA99;
+    }
+}
+
+@keyframes switch_bgs__06 {
+    from {
+        background-color: #9999AA;
+    }
+    50% {
+        background-color: #99AA99;
+    }
+    to {
+        background-color: #AA9999;
+    }
+}
+
+
+
+.text {
+    position: relative;
+  
+    opacity: 0;
+}
+
+@keyframes text_anim_01 {
+    from {
+        opacity: 0;
+        transform-origin: left;
+        transform: scaleX(1.2);
+
+        left: 30px;
+    }
+
+    80% {
+        opacity: 0.3;
+        transform-origin: left;
+        left: 6px;
+    }
+
+    to {
+        opacity: 1;
+        transform-origin: left;
+        transform: scaleX(1);
+        
+        left: 0;
+    }
+}
+
+@keyframes text_anim_02 {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes text_anim_03 {
+    from {
+        opacity: 0;
+        transform: rotate(60deg);
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
